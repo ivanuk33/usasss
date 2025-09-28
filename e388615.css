@@ -1,0 +1,507 @@
+.widget-tournaments {
+	padding: 20px 17px 0;
+
+	&-item {
+		background: url("../assets/img/news-big-small.html") no-repeat;
+		display: block;
+		padding: 6px 6px 0 6px;
+		height: 90px;
+		margin-bottom: 10px;
+	}
+	&-icon {
+		overflow: hidden;
+		height: 64px;
+		width: 242px;
+		margin-bottom: 3px;
+	}
+	&-title {
+		text-align: center;
+		color: #ffffff;
+		font-size: 14px;
+		text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+	}
+	.timer {
+		margin: 0 auto 5px;
+	}
+
+	.tournament-info {
+		width: 224px;
+		margin: 0 auto 15px;
+	}
+
+	.button-blue {
+		margin: 0 5px 25px;
+		span {
+			font-size: 22px;
+		}
+	}
+
+	.prize-fund {
+		span {
+			font-size: 16px;
+		}
+		.money {
+			margin-left: -7px;
+			width: 235px;
+			font-size: 34px;
+			height: 35px;
+			line-height: 35px;
+		}
+	}
+}
+
+.tournament-info {
+	background-color: #10161d;
+	border: 2px solid #000000;
+	box-shadow: 0 0 0 1px #232f3b,
+	inset 0 -3px 10px rgba(0,0,0,.7);
+	border-radius: 2px;
+	padding: 10px;
+	color: #ffffff;
+
+	ul li {
+		font-size: 15px;
+
+		span {
+			float: right;
+		}
+	}
+
+	.user-result {
+		font-size: 15px;
+		border-top: 1px solid #262f36;
+		margin-top: 10px;
+		padding-top: 10px;
+
+		span {
+			float: right;
+		}
+	}
+}
+
+.prize-fund {
+	text-align: center;
+	margin-bottom: 10px;
+
+	span {
+		color: #c7c7c7;
+		text-shadow: 0 2px 3px black;
+		font-size: 14px;
+		display: block;
+		margin-bottom: 3px;
+	}
+
+	.money {
+		color: #ffbe00;
+		font-size: 30px;
+		line-height: 30px;
+		white-space: nowrap;
+		overflow: hidden;
+		letter-spacing: 0.001em;
+
+	}
+}
+
+.tournaments {
+	.line {
+		width: 683px;
+		margin: 10px 0 20px -21px;
+	}
+	.lottery-item-rules-title h1 {
+		text-align: left;
+		padding-top: 0 !important;
+	}
+
+	&-date {
+		color: #737f91;
+		font-size: 20px;
+		text-shadow: 0 1px 0 rgba(0,0,0,.72);
+		margin: 11px 0;
+
+		span {
+			font-size: 14px;
+			color: #c7c7c7;
+			text-shadow: 0 2px 3px black;
+		}
+	}
+
+	&-item {
+		text-align: center;
+		background: url("../assets/img/tournaments/bg.html") no-repeat;
+		width: 646px;
+		height: 272px;
+		margin-left: -3px;
+		margin-bottom: 25px;
+        position: relative;
+
+		.img {
+			margin: 4px 0 0 4px;
+			float: left;
+			width: 366px;
+			height: 264px;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&-info {
+			margin-left: 16px;
+			float: left;
+			width: 260px;
+
+			.timer {
+				position: static;
+				margin: 19px 0 0 17px;
+
+				.pair:last-child {
+					margin-right: 0;
+				}
+			}
+
+            &.none-timer{
+                padding-top: 70px;
+            }
+		}
+
+		.button-red50,
+		.button-blue50,
+		.button-blue {
+			width: 226px;
+			margin: 0 auto;
+			font-size: 27px;
+		}
+
+		.button-blue {
+			font-size: 21px;
+
+			span {
+				padding: 0;
+			}
+		}
+
+		&.current {
+
+			.prize-fund {
+				margin-top: 10px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				background: url("../assets/img/label-current-lottery.html") no-repeat;
+				width: 122px;
+				height: 124px;
+				top: -13px;
+				left: -13px;
+			}
+
+			.button-red50 {
+				margin-top: 15px;
+				font-size: 27px;
+			}
+		}
+
+		&.done {
+			.tournaments-done {
+				margin-top: 5px;
+			}
+			.tournaments-date {
+				margin: 5px 0;
+			}
+			.prize-fund .money {
+				line-height: 25px;
+			}
+		}
+
+        &.vip {
+            &:after {
+                content: '';
+                position: absolute;
+                background: url("../assets/img/label-vip-lottery.html") no-repeat;
+                width: 124px;
+                height: 95px;
+                top: 2px;
+                left: 277px;
+            }
+        }
+
+        .lights {
+            display: block;
+            background: url("../assets/img/tournaments/lights.html") repeat-y;
+            width: 17px;
+            height: 266px;
+            position: absolute;
+            top: 3px;
+            left: 370px;
+        }
+
+        &-terms {
+            padding: 20px 20px 0;
+            & &-description {
+                p {
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: #babbbc;
+                    margin: 0 0 3px;
+                }
+                strong {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #ffbe00;
+                }
+            }
+            &-status {
+                float: left;
+                width: 85px;
+                height: 60px;
+                &-level {
+                    display: table-cell;
+                    width: 85px;
+                    padding: 2px 0;
+                    height: 72px;
+                    vertical-align: middle;
+                    text-align: center;
+                    & div {
+                        display: inline-block;
+                        background-image: url('../assets/img/loyalty/spr-status-middle.html');
+                        background-repeat: no-repeat;
+                    }
+                    & .level {
+                        &_beginner {
+                            background-position: 0 -86px;
+                            width: 54px;
+                            height: 60px;
+                            &.disabled {
+                               background-position: 0 -9px;
+                            }
+                        }
+                        &_bronze {
+                            background-position: -59px -83px;
+                            width: 63px;
+                            height: 64px;
+                            &.disabled {
+                                background-position: -59px -5px;
+                            }
+                        }
+                        &_silver {
+                            background-position: -130px -77px;
+                            width: 63px;
+                            height: 72px;
+                            margin-top: -2px;
+                            &.disabled {
+                                background-position: -129px 0;
+                            }
+                        }
+                        &_golden {
+                            background-position: -191px -82px;
+                            width: 59px;
+                            height: 68px;
+                            &.disabled {
+                               background-position: -192px -4px;
+                            }
+                        }
+                        &_platinum {
+                            background-position: -262px -6px;
+                            width: 57px;
+                            height: 66px;
+                            &.disabled {
+                                background-position: -263px -85px;
+                            }
+                        }
+                        &_emerald {
+                            background-position: -326px -77px;
+                            width: 63px;
+                            height: 72px;
+                            margin-top: -2px;
+                            &.disabled {
+                                background-position: -326px 0;
+                            }
+                        }
+                        &_diamond {
+                            background-position: -391px -79px;
+                            width: 65px;
+                            height: 71px;
+                            margin-top: -2px;
+                            &.disabled {
+                                background-position: -389px -1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.disabled {
+
+        }
+	}
+
+	&-results-table {
+
+		tr:nth-child(3),
+		tr:nth-child(4),
+		tr:nth-child(5) {
+			height: 70px;
+			line-height: 70px;
+
+			td:first-child {
+				&:before {
+					content: '';
+					background: url("../assets/img/tournaments/spr-medals.html") no-repeat center top;
+					display: block;
+					height: 70px;
+				}
+
+				.blue-num-bg {
+					display: none;
+				}
+			}
+			td:last-child {
+				font-size: 24px;
+			}
+		}
+
+		tr:nth-child(4) td:first-child:before {
+			background-position: 50% -70px;
+		}
+
+		tr:nth-child(5) td:first-child:before {
+			background-position: 50% -140px;
+		}
+
+		&.prizes {
+			td:nth-child(2) {
+				color: #ffc000;
+			}
+			tr:nth-child(3),
+			tr:nth-child(4),
+			tr:nth-child(5) {
+				height: 50px;
+				line-height: 50px;
+
+				td:first-child {
+					&:before {
+						display: none;
+					}
+					.blue-num-bg {
+						display: inline-block;
+					}
+				}
+			}
+			td:last-child {
+				color: #ffffff;
+				font-size: 16px !important;
+			}
+
+            td.prize-place {
+                padding: 6px 0;
+                height: 38px;
+                width: 33.33% !important;
+                font-size: 16px !important;
+                text-align: left !important;
+                color: #d4d4d4 !important;
+                .blue-num-bg {
+                    margin: 0 0 0 5px;
+                    float: left;
+                    text-align: center !important;
+                    span {
+                        font-size: 24px;
+                    }
+                }
+                .gold {
+                    margin-left: 60px;
+                    line-height: 38px !important;
+                    font-size: 16px !important;
+                    color: #FFC000 !important;
+                }
+                .prize-place-medal {
+                    margin: 0 0 0 1px;
+                    float: left;
+                    width: 47px;
+                    height: 38px;
+                    padding-top: 8px;
+                    &.medal1 {
+                        background: url("../assets/img/tournaments/spr-medals.html") 50% -13px no-repeat;
+                    }
+                    &.medal2 {
+                        background: url("../assets/img/tournaments/spr-medals.html") 50% -83px no-repeat;
+                    }
+                    &.medal3 {
+                        background: url("../assets/img/tournaments/spr-medals.html") 50% -152px no-repeat;
+                    }
+                    & + .gold {
+                        padding-top: 8px;
+                    }
+                }
+            }
+		}
+
+		th {
+			text-align: left;
+		}
+
+	}
+    
+    &-bottom-button {
+        width: 220px;
+        margin: 0 auto 30px;
+        span {
+            font-size: 26px;
+        }
+    }
+
+	&-done {
+		font-size: 20px;
+		color: red;
+		text-shadow: 0 3px 2px black;
+	}
+
+	.game-list .game:hover .game-overlay .button-red50 {
+		top: 23px;
+	}
+}
+
+.game-sidebar.tournaments {
+	margin-top: 10px;
+
+	.prize-fund {
+		margin-bottom: 5px;
+	}
+
+	.tournament-info {
+		margin-bottom: 10px;
+		padding: 5px 10px;
+
+		ul.small-info {
+			margin-top: 5px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+			li {
+				font-size: 11px;
+				line-height: 14px;
+				color: #394a5c;
+
+				span {
+					float: right;
+				}
+			}
+		}
+	}
+
+	.img {
+		display: block;
+		margin: 5px auto;
+		border: 2px solid black;
+		box-shadow: 0 0 0 1px #232f3b;
+		border-radius: 2px;
+		text-align: center;
+		height: 58px;
+
+		img {
+			width: 204px;
+			height: 58px;
+		}
+	}
+}

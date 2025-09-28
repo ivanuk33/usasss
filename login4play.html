@@ -1,0 +1,42 @@
+﻿<?php
+
+$userData = login4play_getUserData();
+
+/**
+ * Get user data from Login4Play
+ * 
+ * @return array User data
+ *     uid - User ID
+ *     given_name - First name
+ *     family_name - Last name
+ *     gender - Gender
+ *     birthday - Birthday (yyyy-mm-dd)
+ *     city - City
+ *     country - Country
+ *     email - Email
+ *     phone - Phone number
+ *     email_confirm - Email confirm status (0 or 1)
+ *     phone_confirm - Phone number confirm status (0 or 1)
+ *     network - Social network
+ */
+function login4play_getUserData() {
+    // Data from site settings in Personal account
+    $siteId = 123;
+    $secret = "0123456789abcdef0123456789abcdef";
+
+    $token = filter_input(INPUT_POST, "access_token");
+    $host = $_SERVER["HTTP_HOST"];
+
+    $signature = sha1($siteId . ":" . $host . ":" . $token . ":" . $secret);
+
+    $url = "http://login4play.com/token.php?token=" . $token . "&host=" . $host . "&site=" . $siteId . "&signature=" . $signature;
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    return json_decode($result, true);
+}
